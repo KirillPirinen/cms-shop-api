@@ -16,7 +16,8 @@ module.exports = {
         }
       },
       type: {
-        type: Sequelize.ENUM
+        type: Sequelize.ENUM,
+        values: ['quantity', 'kg', 'litres']
       },
       quantity: {
         type: Sequelize.NUMERIC

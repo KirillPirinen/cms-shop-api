@@ -15,7 +15,8 @@ module.exports = {
         type: Sequelize.NUMERIC
       },
       type: {
-        type: Sequelize.ENUM
+        type: Sequelize.ENUM,
+        values: ['percentage', 'natural']
       },
       createdAt: {
         allowNull: false,
