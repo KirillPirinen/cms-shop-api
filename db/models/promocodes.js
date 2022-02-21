@@ -12,7 +12,10 @@ module.exports = (sequelize, DataTypes) => {
   Promocodes.init({
     promocode: DataTypes.STRING,
     discount: DataTypes.NUMERIC,
-    type: DataTypes.ENUM
+    type: {
+      type: DataTypes.ENUM,
+      values: ['percentage', 'natural']
+    }
   }, {
     sequelize,
     modelName: 'Promocodes',

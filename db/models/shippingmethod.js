@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class ShippingMethod extends Model {
     static associate({ Order }) {
-      this.hasMany(Order, { foreignKey: ''})
+      this.hasMany(Order, { foreignKey: 'shippingMethod_id'})
     }
   }
   ShippingMethod.init({

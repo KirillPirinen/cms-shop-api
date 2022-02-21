@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
   }
   Availiability.init({
     product_id: DataTypes.INTEGER,
-    type: DataTypes.ENUM,
+    type: {
+      type: DataTypes.ENUM,
+      values: ['quantity', 'kg', 'litres']
+    },
     quantity: DataTypes.NUMERIC
   }, {
     sequelize,
